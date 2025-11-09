@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Momo+Trust+Display&display=swap" rel="stylesheet">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Momo+Trust+Display&display=swap');
+ @keyframes float {
+  0%, 100% {
+    transform: translateY(0) ;
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
+.animate-float {
+  animation: float 2s ease-in-out infinite;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE/Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+</style>
+</head>
+<body>
+        <div style="font-family: 'Momo Trust Display', sans-serif;" class="  w-screen bg-blue-500 flex place-content-center">
+            <div class="pl-20 pr-20 w-[100%] sm:w-[80%] h-[100%] bg-blue-200 ">
+
+            <div class="sm:flex sm:place-content-between ">
+               <div class=" sm:hidden shadow-lg mt-20 flex  rounded-[100%] h-50 w-50  border border-8 animate-float border-blue-600/50 ">
+                    <img class="rounded-[100%] "
+
+                     src="./myimage.jpg" alt="">
+                </div> 
+                <div class= "   text-5xl text-blue-700 bold ">
+                    <h3 class="  text-shadow-blue-300 text-shadow-2xs" >
+                        Ishant Khatri
+                    </h3>
+                    <h2 class="text-sm underline text-blue-500">Computer science engineer</h2>
+                    
+                          <br>
+                    <div class="text-lg  text-blue-500 ">
+                        
+                        <h2 class="text-2xl text-blue-700">Tech-stack </h2>
+                         <h2>>javascript</h2>
+                          <h2>>typescript</h2>
+                           <h2>>nodejs</h2>
+                            <h2>>expressjs</h2>
+                            <h2>>mongo db</h2>
+
+                            <h2>>React</h2>
+                            
+<div class="flex mt-3 w-full   rounded-xl ">
+   <a href="https://github.com/ishant1412"> <img class=" h-10 w-10 border border-blue-400 m-1 rounded-md border-2  " src="image.png" alt=""> </a>
+   <a href="https://www.instagram.com/ishant__khatri_14/"> <img class=" h-10 w-10 border border-blue-400 m-1 rounded-md border-2  " src="insta.png" alt=""> </a>
+   <a href=" https://x.com/_lets_see__"> <img class=" h-10 w-10 border border-blue-400 m-1 rounded-md border-2  " src="xf.png" alt=""> </a>
+
+     
+</div>
+                     </div>
+
+
+                </div>
+                <div class=" sm:block shadow-lg mt-20 flex hidden rounded-full h-50 w-50 md:h-80 md:w-80  border border-8 animate-float border-blue-600/50 ">
+                    <img class="rounded-full "
+
+                     src="./myimage.jpg" alt="">
+                </div>
+            </div>
+
+
+                <div class=" mt-4 text-3xl text-blue-700 " >My-Projects</div>    
+                <div class=" flex  overflow-x-auto space-x-4 no-scrollbar p-4 sm:grid sm:grid-cols-2 sm:grid-rows-2 sm:place-items-center  ">
+                    <div class="h-50 w-[100%] sm:w-[75%] shrink-0 shadow-lg mt-5 border border-blue-300 border-3 rounded-xl  bg-gray-200" ></div>
+                    <div class="h-50 w-[100%] sm:w-[75%] shrink-0 shadow-lg mt-5 border border-blue-300 border-3 rounded-xl  bg-gray-200"></div>
+                    <div class="h-50 w-[100%] sm:w-[75%] shrink-0 shadow-lg mt-5 border border-blue-300 border-3 rounded-xl  bg-gray-200"></div>
+                 
+                    <div class="h-50 w-[100%] sm:w-[75%] shrink-0 shadow-lg mt-5 border border-blue-300 border-3 rounded-xl  bg-gray-200"></div>
+                </div> 
+                <div class=" pr-12 mt-10 ">
+                                   <div class="  text-3xl text-blue-700 " >contact-me</div>
+                                  <div class="text-blue-400 text-lg  place-content-between">
+                                   <div>phone:7230815845</div> 
+                                   <div class=" flex"> 
+                                   <div >email: <span id="email">ishant89572@gmail.com</span></div> 
+                                   <button  id="btn" class="rounded-lg bg-blue-700 pl-1 pr-1 text-[16px] text-white focus:border borer-2 border-blue-300  ">copy</button>  
+                                    </div>  
+                                   </div>
+<br>
+
+<br>
+                </div>    
+             
+                
+              </div> 
+              
+            
+        </div>
+
+    <script>
+        const email = document.getElementById('email')
+        const btn = document.getElementById('btn')
+        btn.onclick=()=>{
+               const text= email.innerText
+               window.navigator.clipboard.writeText(text);
+               btn.innerHTML='copied';
+               setTimeout(()=>{
+                    btn.innerHTML='copy'
+               },3000)
+        }
+    </script>
+</body>
+</html>
